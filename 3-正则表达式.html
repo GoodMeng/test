@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				正则表达式 也叫作规则表达式
+					查找匹配某些符合规则的字符串，正则表达式就是写这种规则的工具
+
+				一套 模式
+
+				正则表达式只能在字符串中使用
+
+				创建正则：
+					1. 字面量的形式 (推荐使用)
+						/正则表达式/修饰符
+					2. 构造函数的形式
+
+						new RegExp(正则表达式,修饰符)
+
+						如果规则是存在变量中，使用构造函数的形式
+				
+			*/
+			var str = 'abc';
+			//要匹配的规则，存在了变量中
+			var abc = "a";
+
+			var re = /abc/;  //并不会把abc解析为变量
+ 
+			var re2 = new RegExp(abc);
+
+			console.log( re );
+			console.log( re2 );
+
+
+
+			/*var str = 'abc';
+			//创建正则
+			var re = /ab/;
+			//构造函数的形式创建正则
+			var re2 = new RegExp("a");
+
+			console.log( re );
+			console.log( re2 );*/
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

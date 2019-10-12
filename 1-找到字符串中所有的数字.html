@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			var str = 'ahhg13hfh45hfhf569fjffj123';
+			//需求：把字符串中所有为数字的字符找出来，放在数组中
+			//需求2：把字符串中所有为连续的数字的字符找出来 放在数组中
+
+			//需求1
+			/*var arr = [];
+			for( var i = 0; i < str.length; i++ ){
+				if(!isNaN(Number(str.charAt(i)))){
+						arr.push(str.charAt(i))
+				}
+			}
+
+			console.log( arr );*/
+
+			/*var arr = str.split("").filter(function (item){
+				return 	!isNaN(Number(item));
+			})
+
+				console.log( arr );*/
+
+			//需求2：把字符串中所有为连续的数字的字符找出来 放在数组中
+
+			//找到一个数字之后，再继续往后找，直到不是数字为止，把前几个数字作为整体放在数组中
+			var n = '';
+			//["a","1","2","3","b","3","4","c"]
+			var arr = [];
+			str.split("").forEach(function (item){
+				if( !isNaN(Number(item)) ){
+					//是数字字符
+					n+=item;
+				}else if(n){
+					arr.push(n);
+					n = '';
+				}
+			});
+
+			if(n){
+				arr.push(n);
+			}
+
+			console.log( arr );
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

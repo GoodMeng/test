@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				str.replace() 替换
+					作用
+					      替换掉匹配的字符串或正则表达式匹配到的内容
+					语法
+						String string.replace(string|regexObj,string|function)
+					参数
+						(string|regexObj,string|function)
+							第一个参数：字符串或正则表达式
+							第二个参数：字符串或函数
+						注意：第二个参数为函数，则必须要有返回值，否则为	          替换后的内容为undefined
+					返回值
+						替换后新的字符串
+
+
+			*/
+
+			var str = "a1hfh24ff56h7fh";
+			var re = /\d+/g;
+
+			var newStr = str.replace(re,"*");
+
+			console.log( str );
+			console.log( newStr );
+
+
+		</script>
+	</head>
+
+	<body>
+		<input id="message" />
+		<input type="button" value="验证一下" id="btn" />
+		<span id="tip"></span>
+		<script>
+			//在输入的内容中，有数字的字符存在，如果没有提醒格式错误；有的话提醒成功
+
+			btn.onclick  =function (){
+				var value = message.value.trim();
+				var re = /\d/;
+				if( !value ){
+					tip.innerHTML = "不能为空"
+				}else if(!re.test(value)){
+					tip.innerHTML = "要包含数字"
+				}else{
+					tip.innerHTML = "填写正确"
+				}
+			};
+		</script>
+	</body>
+</html>

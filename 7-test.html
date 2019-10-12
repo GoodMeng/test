@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				re.test():
+					作用
+						 查看正则表达式与指定的字符串是否匹配
+					语法
+						boolean regexObj.test(string)
+					参数
+						string
+							用来与正则表达式匹配的字符串
+					返回值
+						布尔值 true 或 false
+
+						匹配到返回true，否则为false
+			
+			\d 代表一个数字
+			*/
+
+
+		</script>
+	</head>
+
+	<body>
+		<input id="message" />
+		<input type="button" value="验证一下" id="btn" />
+		<span id="tip"></span>
+		<script>
+			//在输入的内容中，有数字的字符存在，如果没有提醒格式错误；有的话提醒成功
+
+			btn.onclick  =function (){
+				var value = message.value.trim();
+				var re = /\d/;
+				if( !value ){
+					tip.innerHTML = "不能为空"
+				}else if(!re.test(value)){
+					tip.innerHTML = "要包含数字"
+				}else{
+					tip.innerHTML = "填写正确"
+				}
+			};
+		</script>
+	</body>
+</html>

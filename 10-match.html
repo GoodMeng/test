@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				str.match()
+					作用
+					    检索指定字符串或正则表达式匹配的字符串
+					语法
+						Array string.match(string|regexObj)
+					参数
+						string|regexObj
+							字符串或正则表达式
+
+					返回值
+						返回数组---把匹配到的字符串放在数组中
+						没有检索到返回null
+
+
+
+			*/
+			var str = '12jrfjfj234';
+
+			console.log( str.match("abc") );  //null
+
+			/*var re = /\d/;
+
+			//把字符串匹配到的字符拿出来
+
+			console.log( str.match(re) );  //Array*/
+
+			//数组
+
+			/*var arr = [1,2,3,4];
+
+			arr.abc = "我是挂在arr上的属性";
+
+			console.log( arr );*/
+
+
+		</script>
+	</head>
+
+	<body>
+		<input id="message" />
+		<input type="button" value="验证一下" id="btn" />
+		<span id="tip"></span>
+		<script>
+			//在输入的内容中，有数字的字符存在，如果没有提醒格式错误；有的话提醒成功
+
+			btn.onclick  =function (){
+				var value = message.value.trim();
+				var re = /\d/;
+				if( !value ){
+					tip.innerHTML = "不能为空"
+				}else if(!re.test(value)){
+					tip.innerHTML = "要包含数字"
+				}else{
+					tip.innerHTML = "填写正确"
+				}
+			};
+		</script>
+	</body>
+</html>

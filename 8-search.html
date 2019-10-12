@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				str.search():
+					作用
+          				检索指定字符串或正则表达式匹配的字符串
+          			语法
+						number string.search(string|regexObj)
+					参数
+						string|regexObj
+							字符串或正则表达式
+          			返回值
+						返回数字---匹配到的字符串首次出现的位置
+
+						没有检索到返回-1
+
+					search方法和indexOf方法不同就在于search可以传入正则表达式，indexOf不能传入正则表达式。
+
+			*/
+
+			var str = "a5bvf2341";
+
+			/*console.log( str.indexOf("1") );
+			console.log( str.search("1") );*/
+
+			//在str中找数字首次出现的位置
+
+			console.log( str.search(/\d/) );
+
+		</script>
+	</head>
+
+	<body>
+		<input id="message" />
+		<input type="button" value="验证一下" id="btn" />
+		<span id="tip"></span>
+		<script>
+			//在输入的内容中，有数字的字符存在，如果没有提醒格式错误；有的话提醒成功
+
+			btn.onclick  =function (){
+				var value = message.value.trim();
+				var re = /\d/;
+				if( !value ){
+					tip.innerHTML = "不能为空"
+				}else if(!re.test(value)){
+					tip.innerHTML = "要包含数字"
+				}else{
+					tip.innerHTML = "填写正确"
+				}
+			};
+		</script>
+	</body>
+</html>

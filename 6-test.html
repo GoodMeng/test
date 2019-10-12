@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				re.test():
+					作用
+						 查看正则表达式与指定的字符串是否匹配
+					语法
+						boolean regexObj.test(string)
+					参数
+						string
+							用来与正则表达式匹配的字符串
+					返回值
+						布尔值 true 或 false
+
+						匹配到返回true，否则为false
+			
+			\d 代表一个数字
+			*/
+
+			var str = 'ahfhfjff';
+
+			//字符串中是否含所有数字的字符
+
+			var re = /\d/;
+
+			alert(re.test(str))
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

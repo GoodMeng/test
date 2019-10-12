@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			var str = '妙味课堂：今天有雾霾！妙味课堂今天放假！妙味心中很不爽。';
+			//过滤敏感词  妙味课堂 妙味 雾霾  
+
+			//OR 或者 | 
+
+			var re = /妙味课堂|妙味|雾霾/g;
+
+
+			//str = str.replace(re,"****");
+
+			str = str.replace(re,function ($0){
+				var star = '';
+				for( var i = 0; i < $0.length; i++ ){
+					star += "*"	
+				}	
+				return star;
+			});
+
+			console.log( str );
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>
